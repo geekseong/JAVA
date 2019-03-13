@@ -1,5 +1,6 @@
-package com.jpa.Domain.Posts;
+package com.jpa.Webservice.Dto.Posts;
 
+import com.jpa.Webservice.Domain.Posts.Posts;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

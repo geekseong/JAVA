@@ -1,6 +1,7 @@
-package com.jpa.Domain.Posts;
+package com.jpa.Webservice.Domain.Posts;
 
 
+import com.jpa.Webservice.Domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

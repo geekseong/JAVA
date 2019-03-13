@@ -1,5 +1,7 @@
-package com.jpa.Domain.Posts;
+package com.jpa.Webservice.Web;
 
+import com.jpa.Webservice.Domain.Posts.PostsRepository;
+import com.jpa.Webservice.Dto.Posts.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
