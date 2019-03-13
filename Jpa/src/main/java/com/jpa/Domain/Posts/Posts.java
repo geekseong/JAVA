@@ -22,15 +22,15 @@ import javax.persistence.Id;
     테이블과 링크될 클래스임을 나타냄.
     언더스코어로이름을 매칭한다 ex) salesManager -> sales_manager table
  */
+
 @Entity
 @Getter
 public class Posts {
 
-    // PK 필드를 나타낸다.
-    @Id
-
-    // PK 생성 규칙을 나타낸다.
+    // @Id는 PK 필드를 나타낸다.
+    // @GeneratedValue PK 생성 규칙을 나타낸다.
     // 기본값은 AUTO로 auto_increment와 같이 증가하는 정수형 값이 된다.
+    @Id
     @GeneratedValue
     private Long id;
 
@@ -73,7 +73,7 @@ public class Posts {
         생성자를 통 최종값 채운 후 데이터에비스에 insert하는것이며, 값 변경이 필요한 경우에는
         해당 이벤트에 맞는 public 매서드를 호출하여 변경하는것을 전제로함.
 
-        여기서 생성자 대신 빌더가 제공되며, 생성시점에 값을 채워주는 역할을 똑같다.
+        여기서 생성자 대신 빌더가 제공되며, 생성시점에 값을 채워주는 역할은 똑같다.
         다만 생성자로 값을 채울경 채워야할 필드가 무엇인지 알 수 없습니다.
 
 
