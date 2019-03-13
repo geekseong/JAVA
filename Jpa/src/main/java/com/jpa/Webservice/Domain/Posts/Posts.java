@@ -7,10 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 /*
     인자가 없는 기본생성자를 만드는 어노테이션으로 엑세스레벨은 접근 지정자를 나타낸다.
@@ -32,7 +29,7 @@ public class Posts extends BaseTimeEntity {
     // @GeneratedValue PK 생성 규칙을 나타낸다.
     // 기본값은 AUTO로 auto_increment와 같이 증가하는 정수형 값이 된다.
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
 

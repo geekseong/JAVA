@@ -1,10 +1,15 @@
 package com.jpa.Webservice.Service;
 
 import com.jpa.Webservice.Domain.Posts.PostsRepository;
+import com.jpa.Webservice.Dto.Posts.PostsMainResponseDto;
 import com.jpa.Webservice.Dto.Posts.PostsSaveRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 @AllArgsConstructor
@@ -17,6 +22,13 @@ public class PostsService {
     @Transactional
     public Long save(PostsSaveRequestDto dto){
         return postsRepository.save(dto.toEntity()).getId();
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsMainResponseDto> findAllDesc(){
+        return postsRepository.findAllDesc()
+                .map(PostsMainResponseDto::new)
+                .collect(Collectors.toList());
     }
 }
 
