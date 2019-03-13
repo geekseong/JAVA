@@ -25,7 +25,7 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-public class Posts {
+public class Posts extends BaseTImeEntity {
 
     // @Id는 PK 필드를 나타낸다.
     // @GeneratedValue PK 생성 규칙을 나타낸다.
