@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 /***
  *
- *  reference link : https://jojoldu.tistory.com/251
+ *  reference link
+ *  	https://jojoldu.tistory.com/251
+ *  	https://jojoldu.tistory.com/255?category=635883
  */
 
 @EnableJpaAuditing // JPA Auditing 활성화
