@@ -1,6 +1,7 @@
 package com.jpa.Webservice.Dto.Posts;
 
 import com.jpa.Webservice.Domain.Posts.Posts;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -25,7 +26,14 @@ public class PostsSaveRequestDto {
 
     private String title;
     private String contents;
-    private  String author;
+    private String author;
+
+    @Builder
+    public PostsSaveRequestDto(String title, String contents, String author){
+        this.title = title;
+        this.contents = contents;
+        this.author = author;
+    }
 
     public Posts toEntity(){
         return Posts.builder()
